@@ -13,15 +13,18 @@ public class ArraysCompareTest {
 		int[] numbers = { 12, 3, 4, 1 };
 		int[] expected = { 1, 3, 4, 12 };
 		Arrays.sort(numbers);
+		//Normal equals won't work on arrays. so we use ArrayEquals
 		assertArrayEquals(expected, numbers);
 	}
 
+	// Expected Exception should be thrown.
 	@Test(expected=NullPointerException.class)
 	public void testArraySort_NullArray() {
 		int[] numbers = null;
 		Arrays.sort(numbers);
 	}
-	
+
+	//Timeout to check performance. If the method isn't complete within that, test case fails.
 	@Test(timeout=100)
 	public void testSort_Performance(){
 		int array[] = {12,23,4};

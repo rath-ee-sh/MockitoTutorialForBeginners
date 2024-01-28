@@ -19,6 +19,7 @@ public class StringHelperTest {
 
 	@Test
 	public void testTruncateAInFirst2Positions_AinFirst2Positions() {
+		// expected vs actual results of the method.
 		assertEquals("CD", helper.truncateAInFirst2Positions("AACD"));
 	}
 
@@ -30,12 +31,14 @@ public class StringHelperTest {
 	// ABCD => false, ABAB => true, AB => true, A => false
 	@Test
 	public void testAreFirstAndLastTwoCharactersTheSame_BasicNegativeScenario() {
+		//should return false
 		assertFalse( 
 				helper.areFirstAndLastTwoCharactersTheSame("ABCD"));
 	}
 
 	@Test
 	public void testAreFirstAndLastTwoCharactersTheSame_BasicPositiveScenario() {
+		//should return true
 		assertTrue( 
 				helper.areFirstAndLastTwoCharactersTheSame("ABAB"));
 	}
